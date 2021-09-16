@@ -1,0 +1,15 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "Natours project",
+  "main": "index.js",
+  "scripts": {
+    "compress:file": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "Natours project"
+  },
+  "author": "dee_d_dev :)",
+  "license": "ISC"
+}

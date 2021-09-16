@@ -1,0 +1,46 @@
+.header {
+    height: 95vh;
+    background-image: linear-gradient(to right bottom,#7ed567,#55c57a7a),url(../../img/firmino.jpg);
+    background-size: cover;
+    background-position: top;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    position: relative;
+
+    @include respond (phone) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
+
+    &__logo-box {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+    }
+    
+    &__logo {
+        width: 8rem;
+        transform: translateX(0);
+        transition: transform 2s;
+    }
+    
+    &__logo:hover {
+        transform: translateX(10rem) scale(1.5);
+        transition: transform 2s;
+    }
+    
+    &__text-box {
+        position:absolute;
+        top: 45%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    
+}
+
+
+
+
+
+

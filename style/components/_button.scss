@@ -1,0 +1,125 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 15px 40px;
+      display:inline-block;
+      border-radius: 100px;
+      transition: all .2s;
+      position: relative;
+      z-index:0;
+      font-size: 1.3rem;
+
+      //change for the button element
+      border: none;
+      cursor: pointer;
+    }
+    
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    
+    &::after {
+      content: "";
+      display: inline-block;
+      border-radius: 100px;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top:0;
+      left:0;
+      z-index: -1;
+      transition: all .3s;
+    }
+    
+    &:hover::after {
+      transform: scale(1.6);
+      opacity:0;
+      
+    }
+    
+    &:active,
+    &:focus {
+      outline: none;
+      transform: translateY(1px);
+    }
+    
+    &-white {
+      background-color: #fff;
+      color: #777;
+
+      
+
+      &::after {
+        background-color: #fff;
+      }
+    }
+    
+    &--green {
+      background-color: $color-primary;
+      color:white;
+      position: relative;
+
+      
+      &::after {
+        background-color:$color-primary;
+        content: "";
+        display: inline-block;
+        border-radius: 100px;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: -1;
+        transition: all .3s;
+      }
+    }
+
+    
+    &--animated {
+      animation:moveInBottom 1.5s ease-in;
+      animation-fill-mode: backwards;
+    }
+
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    font-size: $default-font-size;
+    color: $color-primary;
+    display: inline-block;
+    text-decoration: none;
+    border-bottom: 1px solid $color-primary;
+    padding: 3px;
+    transition: all .3s;
+  }
+  
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+    box-shadow: 0 1rem 2rem rgba($color-black, .15);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+    
+}
+
+
+
+
+
+
+
+
+
+
